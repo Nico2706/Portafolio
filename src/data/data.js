@@ -2,6 +2,7 @@ import Mern from "../assets/projects/mern.jpg"
 import Netflix from "../assets/projects/netfilx.jpg"
 import node from "../assets/projects/node-js-y-mysql-1024x576.png"
 import vete from "../assets/projects/veterinaria.png"
+import vette from "../assets/projects/vete.jpg"
 
 export const data=[
     {
@@ -21,7 +22,7 @@ export const data=[
     {
         id:3,
         name:"Veterinaria-React",
-        image:vete,
+        image:vette,
         github:"https://github.com/Nico2706/VeterinariaReact",
         live:"",
     },

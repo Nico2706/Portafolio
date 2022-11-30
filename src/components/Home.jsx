@@ -7,6 +7,7 @@ import {
   FaFacebook,
   FaLinkedinIn,
 } from 'react-icons/fa';
+import {TbArrowBigTop} from "react-icons/tb"
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Flecha from "../assets/scroll-down.gif"
@@ -16,11 +17,56 @@ import pdf from "../assets/Curriculum+vitae.pdf"
 
 
 const Home = () => {
+  const [nav, setNav] = useState(false);
+  const handleClick = () => setNav(!nav);
+
   return (
     <div name="home">
     <div name='home' className='w-full h-screen bg-[#060a10] mt-0'>
+    <div onClick={handleClick} className='md:hidden z-10  '>
+        {!nav ? <FaBars className='bg-[#8892b0]'/> :  <FaBars className='bg-[#060a10]' onClick={handleClick} />}
+      </div>
+
+      {/* Mobile menu */}
+      <ul
+        className={
+          !nav
+            ? 'hidden'
+            : 'absolute top-0 left-0 w-screen h-96 bg-[#060a10] opacity-90 flex flex-col justify-center items-center'
+        }
+      >
+        <li  className='py-6 text-2xl font-mono text-white   shadow-slate-800'>
+          {' '}
+          <Link onClick={handleClick} to='about' smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li className='py-6 text-2xl font-mono text-white   shadow-slate-800'>
+          {' '}
+          <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li  className='py-6 text-2xl font-mono text-white   shadow-slate-800'>
+          {' '}
+          <Link onClick={handleClick} to='work' smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li  className='py-6 text-2xl font-mono text-white   shadow-slate-800'>
+          {' '}
+          <Link onClick={handleClick} to='contact' smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
+        <li className='py-6 text-2xl font-mono text-white   shadow-slate-800'>
+            <Link onClick={handleClick} to="home" smooth={true} duration={500}>
+            <TbArrowBigTop/>
+            </Link>
+        </li>
+      </ul>
     <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full items-center'>
-      <p className='text-[#6cd1d4]'>Hi!, My name is</p>
+      <p className='text-[#6cd1d4]'>Hi! My name is</p>
       <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
         Nicolas Richter
       </h1>
@@ -29,7 +75,7 @@ const Home = () => {
       </h2>
       <p className='text-[#8892b0] py-4 max-w-[700px] flex text-center content-center'>
       I am a fullstack developer with javascript as my main language,
-      I like to learn by doing proyects.
+      I like to learn by doing projects.
       Always looking for the latest technologies to keep training myself.
       I am currently looking for my first work experience.
       </p>
@@ -47,7 +93,7 @@ const Home = () => {
         </button>
         <button className='text-[#060a10] font-bold group border-2 px-6 py-3 my-2 flex items-center bg-[#5197b4] hover:bg-[#326273] rounded-xl hover:border-[#5197b4] hover:rounded-lg hover:transition-colors   animate-pulse'>
         <Link to='work' smooth={true} duration={800}>
-            Proyects
+            Projects
           </Link>
         </button>
         <button className='text-[#060a10] font-bold group border-2 px-6 py-3 my-2 flex items-center bg-[#5197b4] hover:bg-[#326273] rounded-xl hover:border-[#5197b4] hover:rounded-lg hover:transition-colors   animate-pulse'>
@@ -64,6 +110,7 @@ const Home = () => {
       </div>
     </div>
   </div>
+  
   <div className='hidden lg:flex fixed flex-col top-[35%] left-0 mb-0'>
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[1px] duration-500 bg-blue-600'>
