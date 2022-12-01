@@ -22,7 +22,7 @@ const Proyects = () => {
           {/* Gird Item */}
 {project.map((item, index) => (
   <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 w-auto h-auto' key={index}>
-      <img className='w-20 mx-auto' src={item.image} alt="HTML icon" />
+      <img className='w-20 mx-auto sm:w-10' src={item.image} alt="HTML icon" />
       <p className='my-3 text-sm'>{item.name}</p>
       <a href={item.github} className="bg-[#1e264a] p-2 font-mono text-[#ccd6f6] hover:scale-75 text-sm git duration-200 rounded-lg shadow-gray-600 mb-0">Code</a>
   </div>
