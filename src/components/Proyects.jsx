@@ -23,15 +23,15 @@ const Proyects = () => {
 {project.map((item, index) => (
   <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500 w-auto h-auto' key={index}>
       <img className='w-20 mx-auto' src={item.image} alt="HTML icon" />
-      <p className='my-4'>{item.name}</p>
-      <a href={item.github} className="bg-[#1e264a] p-2 font-mono text-[#ccd6f6] hover:scale-75 duration-200 rounded-lg shadow-gray-600 mb-0">Code</a>
+      <p className='my-3 text-sm'>{item.name}</p>
+      <a href={item.github} className="bg-[#1e264a] p-2 font-mono text-[#ccd6f6] hover:scale-75 text-sm git duration-200 rounded-lg shadow-gray-600 mb-0">Code</a>
   </div>
 
 ))}
 
 </div>
 <div >
-              <p className='text-xl font-bold inline border-b-4 border-[#6cd1d4] '>More Proyects</p>
+              <p className='text-xl font-bold inline border-b-4 border-[#6cd1d4] '>More Projects</p>
               <p className='py-4'>You can find the other projects in my <a href="https://github.com/Nico2706" className='text-[#ccd6f6] font-mono text-lg'>GitHub</a></p>
              
           </div>
