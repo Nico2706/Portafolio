@@ -26,7 +26,7 @@ const Footer = () => {
       <a href='https://www.linkedin.com/in/carlos-nicolas-augusto-richter/'><FaLinkedin/></a> 
     </button>
     <button className='bg-[#060a10] p-2 font-mono text-[#ccd6f6]  duration-200 rounded-lg shadow-gray-600'>
-    <a href="https://github.com/Nico2706s"><FaGithub/></a> 
+    <a href="https://github.com/Nico2706"><FaGithub/></a> 
     </button>
     <button className='bg-[#060a10] p-2 font-mono text-[#ccd6f6]  duration-200 rounded-lg shadow-gray-600'>
     <Link to='home' smooth={true} duration={800}> <AiOutlineHome/></Link> 
